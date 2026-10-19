@@ -41,7 +41,21 @@ begin
           output <= '0'; 
 
           case state is
-            when SMOOTH => if input = '01' 
-                  
-          
-        
+            when SMOOTH => 
+              if input = '01' then
+                next_state <= POTHOLE;
+              end if; 
+
+            when POTHOLE =>
+              if input = '01' then
+                next_state <= TRIPPED; 
+              end if; 
+
+            when TRIPPED =>
+              output = '1'; 
+              if input = '10' then
+                next_state <= SMOOTH; 
+              end if; 
+          end case; 
+        end process; 
+end architecture; 
