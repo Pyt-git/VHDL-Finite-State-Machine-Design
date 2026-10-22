@@ -2,7 +2,7 @@
 
 -- State definition: 
 
--- Let FSM states MAGNOLIA, WILLOWDALE, APPLE_HILL_WB, NORMANDY_WB, 
+-- Let FSM states MAGNOLIA_WB, WILLOWDALE, APPLE_HILL_WB, NORMANDY_WB, 
 --                SUNNY_ACRES_WB, MORGAN_WB, LAKESHORE_20551, 
 --                CHURCHILL_WB, LAKESHORE_20713, SAINT_ANDREWS_WB, 
 --                LAKESHORE_20846_WB and MACDONALD
@@ -12,7 +12,7 @@
 -- Let FSM states LAKESHORE_20846_EB, SAINT_ANDREWS_EB, _CASE, 
 --                CHURCHILL_EB, LAKESHORE_20578, MORGAN_EB, 
 --                SUNNY_ACRES_EB, NORMANDY_EB, APPLE_HILL_EB and 
---                WILSON.
+--                WILSON, MAGNOLIA_EB.
 -- represent the Eastbound stops of the 411 route along Lakeshore Road. 
 -- Reference: https://beta.stm.info/horaires-et-trajets/bus/411/est. 
 
@@ -51,7 +51,7 @@ begin
   reg: process(clock, reset)
     begin 
       if reset = '1' then
-        stop <= MAGNOLIA; 
+        stop <= MAGNOLIA_WB; 
       elsif rising_edge(clock) then
         stop <= next_stop; 
       end if; 
@@ -63,7 +63,7 @@ begin
       output = '00'; 
 
       case stop is 
-        when MAGNOLIA => 
+        when MAGNOLIA_WB => 
           if input = '1' then
             next_stop <= WILLOWDALE; 
           end if; 
@@ -194,7 +194,12 @@ begin
 
         when WILSON =>
           if input = '1' then
-            next_stop <= MAGNOLIA; 
+            next_stop <= MAGNOLIA_EB; 
+          end if; 
+            
+        when MAGNOLIA_EB =>
+          if input = '1' then
+            next_stop <= MAGNOLIA_WB; 
           end if; 
       end case; 
     end process; 
