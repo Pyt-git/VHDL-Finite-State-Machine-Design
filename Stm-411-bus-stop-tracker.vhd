@@ -17,6 +17,7 @@
 -- Reference: https://beta.stm.info/horaires-et-trajets/bus/411/est. 
 
 -- Let FSM state DETOUR_EN_COURS represent state of the bus after it departs MACDONALD.
+-- Let FSM state BREAK_AT_MACDONALD represent drivers taking a break at terminus stop. 
 
 -- Characteristics: 
 -- Input determines whether the bus has departed its stop.
