@@ -124,7 +124,7 @@ begin
 
         when MACDONALD =>
           if input = '1' then
-            next_stop <= 'BREAK_AT_MACDONALD'; 
+            next_stop <= BREAK_AT_MACDONALD; 
             counter <= 20;
             output <= '11'; 
           end if; 
