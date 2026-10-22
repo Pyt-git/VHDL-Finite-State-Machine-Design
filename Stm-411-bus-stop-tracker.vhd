@@ -160,7 +160,7 @@ begin
             output <= '01'; 
           end if; 
 
-         when CHURCHILL_EB =>
+        when CHURCHILL_EB =>
           if input = '1' then
             next_stop <= LAKESHORE_20578; 
           else
