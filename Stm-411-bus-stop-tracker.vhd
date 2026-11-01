@@ -37,14 +37,14 @@ entity Stm_411_bus_stop_tracker_Mealy is
 end entity;
 
 architecture behavioral of  Stm_411_bus_stop_tracker_Mealy is
-  type bus_stop is (MAGNOLIA, WILLOWDALE, APPLE_HILL_WB, NORMANDY_WB,
+  type bus_stop is (MAGNOLIA_WB, WILLOWDALE, APPLE_HILL_WB, NORMANDY_WB,
                    SUNNY_ACRES_WB, MORGAN_WB, LAKESHORE_20551, 
                    CHURCHILL_WB, LAKESHORE_20713, SAINT_ANDREWS_WB, 
                    LAKESHORE_20846_WB, MACDONALD, BREAK_AT_MACDONALD,
                    DETOUR_EN_COURS, LAKESHORE_20846_EB, SAINT_ANDREWS_EB, 
                    _CASE, CHURCHILL_EB, LAKESHORE_20578, MORGAN_EB, 
                    SUNNY_ACRES_EB, NORMANDY_EB, APPLE_HILL_EB, 
-                   WILSON
+                   WILSON, MAGNOLIA_EB
   );
   signal stop, next_stop: bus_stop; 
   signal counter: integer := 0; 
