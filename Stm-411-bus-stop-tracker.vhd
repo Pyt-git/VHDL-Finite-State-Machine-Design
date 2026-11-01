@@ -7,14 +7,14 @@
 --                CHURCHILL_WB, LAKESHORE_20713, SAINT_ANDREWS_WB, 
 --                LAKESHORE_20846_WB and MACDONALD
 -- represent the Westbound stops of the 411 route along Lakeshore Road.
--- Reference: https://beta.stm.info/horaires-et-trajets/bus/411/ouest
+-- Reference: https://www.stm.info/horaires-et-trajets/bus/411/ouest
 
 -- Let FSM states LAKESHORE_20846_EB, SAINT_ANDREWS_EB, _CASE, 
 --                CHURCHILL_EB, LAKESHORE_20578, MORGAN_EB, 
 --                SUNNY_ACRES_EB, NORMANDY_EB, APPLE_HILL_EB and 
 --                WILSON, MAGNOLIA_EB.
 -- represent the Eastbound stops of the 411 route along Lakeshore Road. 
--- Reference: https://beta.stm.info/horaires-et-trajets/bus/411/est. 
+-- Reference: https://www.stm.info/horaires-et-trajets/bus/411/est. 
 
 -- Let FSM state DETOUR_EN_COURS represent state of the bus after it departs MACDONALD.
 -- Let FSM state BREAK_AT_MACDONALD represent drivers taking a break at terminus stop. 
